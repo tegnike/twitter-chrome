@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Post Tracker",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "*://*.twitter.com/*",
+      "*://*.x.com/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_end"
+  }]
+}
