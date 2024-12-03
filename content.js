@@ -40,7 +40,7 @@ async function saveToSupabase(postData) {
 
 function interceptTweetSubmission() {
   document.addEventListener('click', async (e) => {
-    const button = e.target.closest('button[data-testid="tweetButton"]');
+    const button = e.target.closest('button[data-testid="tweetButton"], button[data-testid="tweetButtonInline"]');
     if (!button) return;
     
     console.log('%c[Tweet Tracker] Tweet button found and clicked', 'color: blue; font-weight: bold');
